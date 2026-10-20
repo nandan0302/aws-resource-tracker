@@ -60,14 +60,6 @@ The script generates a report containing the available S3 buckets, EC2 instance 
 - Using output redirection to generate reports
 - Practicing AWS resource inventory automation
 
-## Future Improvements
-
-- Add error handling and logging
-- Schedule automatic reports using cron
-- Upload reports to Amazon S3
-- Send notifications to a reporting team
-- Integrate automated checks using GitHub Actions
-
 ## Security
 
 Never commit AWS access keys, secret keys, or sensitive resource reports to GitHub. Use an IAM role where appropriate and grant only the permissions required by the script.
