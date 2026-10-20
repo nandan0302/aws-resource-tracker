@@ -1,0 +1,29 @@
+
+name: AWS Resource Tracker CI
+
+'on':
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  bash-syntax-check:
+    name: Check Bash syntax
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Check Bash script syntax
+        run: bash -n aws_resource_tracker.sh
+
+      - name: Confirm script exists
+        run: test -f aws_resource_tracker.sh
+
+      - name: Display success message
+        run: echo "Bash syntax check passed!"
